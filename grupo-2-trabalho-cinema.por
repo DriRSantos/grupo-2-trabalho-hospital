@@ -32,10 +32,10 @@ programa
             	espere()
           }
           senao se(linha < 0 ou coluna < 0){
-            	escreva("Programa finalizado!\n\n")
+          	escreva("Programa finalizado!\n\n")
           }
-		senao se(linha == 0 ou coluna== 0){
-			escreva("Opção inválida! Linhas de 1 a 10 e colunas de 1 a 12 \n")
+          senao se(linha == 0 ou coluna== 0){
+          	escreva("Opção inválida! Linhas de 1 a 10 e colunas de 1 a 12 \n")
             	espere()
 		}          
           senao se (assent[linha-1][coluna-1] == 0){
@@ -61,7 +61,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1381; 
+ * @POSICAO-CURSOR = 332; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
