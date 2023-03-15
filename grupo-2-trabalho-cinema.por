@@ -11,14 +11,14 @@ programa
     
     funcao inicio(){
      	
-        	imprima(cinema)
+    imprima(cinema)
         	
-        	faca{
-            escreva("Digite a linha e coluna:\n")
-            leia(linha, coluna)
+    faca{
+         escreva("Digite a linha e coluna:\n")
+         leia(linha, coluna)
 
-	       reserva()           
-       	}enquanto(linha >= 0 e coluna >= 0)  	        
+	    reserva()           
+    	   }enquanto(linha >= 0 e coluna >= 0)  	        
     }
 
 	funcao imprima(inteiro cinema[][]){
@@ -62,7 +62,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1251; 
+ * @POSICAO-CURSOR = 388; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
