@@ -1,5 +1,11 @@
 programa
-{
+{	/*
+     * Membros Grupo 2:
+     * Adriana dos Santos Neves	
+     * Fernanda Meirelles
+     * Luiz Otávio Cidade
+     * Rodrigo Bastos
+     */
     
     inteiro linha=0, coluna=0, cinema[10][12]
     
@@ -40,6 +46,7 @@ programa
           }
           senao se(cinema[linha][coluna] == 1){
           	escreva("Assento ocupado!\n")
+          	espere()
           } 
 	}
 	
@@ -55,7 +62,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 245; 
+ * @POSICAO-CURSOR = 1251; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
