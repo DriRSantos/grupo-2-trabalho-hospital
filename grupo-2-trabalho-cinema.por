@@ -6,16 +6,14 @@ programa
      * Luiz Otávio Cidade
      * Rodrigo Bastos
      */
-    inteiro linha=0, coluna=0, cinema[10][12]
-    
     funcao inicio(){
-   	       	
-    		imprima(cinema)
+    		inteiro linha=0, coluna=0, cinema[10][12]    	    		
         	
-	faca{
-		escreva("Digite a linha e coluna:\n")
+	faca{		
+		imprima(cinema)
+		escreva("\nDigite a linha (1 a 10) e coluna (1 a 12):\n")
 		leia(linha, coluna)
-		reserva()    
+		reserva(linha, coluna, cinema)    
     	   }enquanto(linha >= 0 e coluna >= 0)
     }
 
@@ -28,20 +26,24 @@ programa
           }
 	}
 	
-	funcao reserva(){		
-		se(linha >= 10 ou coluna >= 12){
-            	escreva("Opção inválida! Digite outro número!\n")
+	funcao reserva(inteiro linha, inteiro coluna, inteiro assent[][]){		
+		se(linha > 10 ou coluna > 12){
+            	escreva("\nOpção inválida!!\n")
+            	espere()
           }
           senao se(linha < 0 ou coluna < 0){
-            	escreva("Programa finalizado!\n")
+            	escreva("Programa finalizado!\n\n")
           }
-          senao se (cinema[linha][coluna] == 0){
-               escreva("Assento reservado com sucesso!\n\n")
-               cinema[linha][coluna] = 1
-               imprima(cinema)
+		senao se(linha == 0 ou coluna== 0){
+			escreva("Opção inválida! Linhas de 1 a 10 e colunas de 1 a 12 \n")
+            	espere()
+		}          
+          senao se (assent[linha-1][coluna-1] == 0){
+               escreva("Assento reservado com sucesso!\n")
+               assent[linha-1][coluna-1] = 1
                espere()
           }
-          senao se(cinema[linha][coluna] == 1){
+          senao se(assent[linha-1][coluna-1] == 1){
           	escreva("Assento já está reservado!\n")
           	espere()
           } 
@@ -50,7 +52,7 @@ programa
 	funcao espere(){
         cadeia _ 
 
-        escreva("\n\nPressione ENTER para selecionar outra poltrona...\n")
+        escreva("\nPressione ENTER para selecionar outra poltrona...\n")
         leia(_)
     }    
 }
@@ -59,7 +61,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 784; 
+ * @POSICAO-CURSOR = 1381; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
