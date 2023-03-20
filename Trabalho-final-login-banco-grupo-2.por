@@ -9,12 +9,12 @@ programa
      
 	inclua biblioteca Util
 
-		real saldoTotal=0.0
 	funcao inicio(){
 		cadeia matriz[4][2] = {{"Rodrigo","123"},{"Adriana","123"},{"Fernanda","123"},{"Luiz","123"}}
 		cadeia usuario, senha
 		logico usuarioLiberado = falso
 		inteiro opcao=0
+		real deposito=0.0, saque=0.0, saldoTotal=0.0
 
 		escreva("Banco Serratec Lógica 2023 \n")
 		escreva("-------------------------- \n")
@@ -45,13 +45,13 @@ programa
 				
 				escolha(opcao){
 	
-				caso 1: depositar()
+				caso 1: depositar(deposito, saldoTotal)
 				espere()
 				pare
-				caso 2: sacar()
+				caso 2: sacar(saque, saldoTotal)
 				espere()
 				pare
-				caso 3: saldo()
+				caso 3: saldo(saldoTotal)
 				espere()
 				pare
 				caso 4: escreva("Programa encerrado. \n\n")
@@ -74,37 +74,34 @@ programa
 		retorne falso
 	}
 
-	funcao depositar(){
-		real deposito
+	funcao depositar(real dep, real &saldoT){
 		
 		escreva("Quanto deseja depositar? ")
-		leia(deposito)
+		leia(dep)
 		escreva("Depósito realizado com sucesso \n")		
 		
-		saldoTotal += deposito
-		escreva("Saldo disponível na conta: ", saldoTotal)
+		saldoT += dep
+		escreva("\nSaldo disponível na conta: ", saldoT)
 	}
 
-	funcao sacar(){
-		real saque
-		
+	funcao sacar(real saq, real &saldoT){
 		escreva("Quanto deseja sacar da conta? ")
-		leia(saque)
+		leia(saq)
 
-		se(saque <= saldoTotal){
+		se(saq <= saldoT){
 			escreva("Saque realizado com sucesso!!\n")
-			saldoTotal -= saque
+			saldoT -= saq
 		}
 		senao{
 			escreva("Saque não pode ser realizado, sem saldo suficiente\n")
 		}
 	}
 
-	funcao saldo(){
-		escreva("O saldo da conta é: ", saldoTotal)		
+	funcao saldo(real saldoT){
+		escreva("O saldo da conta é: ", saldoT)		
 	}
 	
-	funcao espere(){		
+	funcao espere(){
 		cadeia _
 		
 		escreva("\n\nPressione ENTER para voltar ao menu...")
@@ -116,7 +113,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2115; 
+ * @POSICAO-CURSOR = 2462; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
