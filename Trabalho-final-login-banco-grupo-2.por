@@ -79,7 +79,7 @@ programa
 		
 		escreva("Quanto deseja depositar? ")
 		leia(deposito)
-		escreva("Depósito realizado com sucesso ")		
+		escreva("Depósito realizado com sucesso \n")		
 		
 		saldoTotal += deposito
 		escreva("Saldo disponível na conta: ", saldoTotal)
@@ -92,11 +92,11 @@ programa
 		leia(saque)
 
 		se(saque <= saldoTotal){
-			escreva("Saque realizado com sucesso!!")
+			escreva("Saque realizado com sucesso!!\n")
 			saldoTotal -= saque
 		}
 		senao{
-			escreva("Saque não pode ser realizado, sem saldo suficiente")
+			escreva("Saque não pode ser realizado, sem saldo suficiente\n")
 		}
 	}
 
@@ -116,7 +116,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2140; 
+ * @POSICAO-CURSOR = 2115; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
