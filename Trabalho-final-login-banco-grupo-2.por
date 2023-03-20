@@ -5,8 +5,7 @@ programa
      * Fernanda Meirelles
      * Luiz Otávio Cidade
      * Rodrigo Bastos
-     */
-     
+     */     
 	inclua biblioteca Util
 
 	funcao inicio(){
@@ -26,11 +25,11 @@ programa
 
 	 	usuarioLiberado = validarUsuario(usuario, senha, matriz)
 
-	 	se(usuarioLiberado){
-            escreva("Bem vindo ao sistema!")
-            Util.aguarde(1500)
-            limpa()
-
+		se(usuarioLiberado){
+			escreva("Bem vindo ao sistema!")
+			Util.aguarde(1500)
+			limpa()
+			
 			enquanto(opcao != 4){
 				escreva("\n\n")
 				escreva("--------------\n")
@@ -44,20 +43,19 @@ programa
 				limpa()
 				
 				escolha(opcao){
-	
-				caso 1: depositar(deposito, saldoTotal)
-				espere()
-				pare
-				caso 2: sacar(saque, saldoTotal)
-				espere()
-				pare
-				caso 3: saldo(saldoTotal)
-				espere()
-				pare
-				caso 4: escreva("Programa encerrado. \n\n")
-				pare
-				caso contrario: escreva("Opção INVÁLIDA! Tente novamente (de 1 a 4) \n")
-				espere()
+					caso 1: depositar(deposito, saldoTotal)
+					espere()
+					pare
+					caso 2: sacar(saque, saldoTotal)
+					espere()
+					pare
+					caso 3: saldo(saldoTotal)
+					espere()
+					pare
+					caso 4: escreva("Programa encerrado. \n\n")
+					pare
+					caso contrario: escreva("Opção INVÁLIDA! Tente novamente (de 1 a 4) \n")
+					espere()
 				} 
 			}					
 		 }
@@ -67,8 +65,8 @@ programa
 	}
 
 	funcao logico validarUsuario(cadeia usuario, cadeia senha, cadeia matriz[][]){
-     	para(inteiro i = 0; i < 4; i++){            
-			se(matriz[i][0] == usuario e matriz[i][1] == senha)            
+     	para(inteiro i = 0; i < 4; i++){
+     		se(matriz[i][0] == usuario e matriz[i][1] == senha)
 				retorne verdadeiro
 		}
 		retorne falso
@@ -78,7 +76,7 @@ programa
 		
 		escreva("Quanto deseja depositar? ")
 		leia(dep)
-		escreva("Depósito realizado com sucesso \n")		
+		escreva("Depósito realizado com sucesso \n")
 		
 		saldoT += dep
 		escreva("\nSaldo disponível na conta: ", saldoT)
@@ -98,7 +96,7 @@ programa
 	}
 
 	funcao saldo(real saldoT){
-		escreva("O saldo da conta é: ", saldoT)		
+		escreva("O saldo da conta é: ", saldoT)
 	}
 	
 	funcao espere(){
@@ -113,7 +111,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2462; 
+ * @POSICAO-CURSOR = 151; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
